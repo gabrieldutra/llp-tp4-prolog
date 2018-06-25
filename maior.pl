@@ -1,3 +1,3 @@
-maior([X], X).
-maior([X|L], M) :- maiorAux(X, M, A), maior(L, A).
-maiorAux(X, M, A) :- X > M -> A is X + 0; A is M + 0.
+maior([A],A).
+maior([A|X], A) :- maior(X,B), B < A.
+maior([A|X], B) :- maior(X,B), B >= A.
